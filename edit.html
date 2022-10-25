@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/edit.css">
     <title>Letter</title>
 </head>
 <body>
     <div class="page">
-        <div class="wrapper" id="target">
+        <div class="wrapper active" id="target">
             <span class="top-back"></span>
             <div class="note">
-                <p id="text">
+                <p id="text-entry" contenteditable="true">
                     Hello
                 </p>
             </div>
@@ -22,6 +22,7 @@
             <span class="bottom"></span>
             <span class="top"></span>
         </div>
+        <button id="send-btn">Send</button>
     </div>
 
     <script src="./scripts/firestore.js" type="module"></script>
