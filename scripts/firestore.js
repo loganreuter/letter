@@ -52,6 +52,7 @@ if (url.pathname == "/" || url.pathname == "/letter" || url.pathname == "/letter
     let target = document.getElementById("target")
     let btn = document.getElementById("send-btn")
     let text = document.getElementById("text-entry")
+    let link = document.getElementById("link")
     btn.addEventListener("click", async() => {
         if (target.classList.contains("active")){
             const id = createID()
@@ -60,7 +61,7 @@ if (url.pathname == "/" || url.pathname == "/letter" || url.pathname == "/letter
             }).then(() => {
                 target.classList.remove("active")
                 console.log(`${url.origin}/letter?id=${id}`)
-                navigator.clipboard.writeText(`${url.origin}/letter?id=${id}`)
+                link.value = `${url.origin}/letter?id=${id}`
             }).catch((err) => {
                 console.log(err)
             })
