@@ -48,7 +48,7 @@ if (url.pathname == "/" || url.pathname == "/letter" || url.pathname == "/letter
             target.classList.add("active")
         }
     })
-} else if (url.pathname == "/edit.html" || url.pathname == "/edit.html/"){
+} else if (url.pathname == "/edit.html" || url.pathname == "/letter/edit.html"){
     let target = document.getElementById("target")
     let btn = document.getElementById("send-btn")
     let text = document.getElementById("text-entry")
