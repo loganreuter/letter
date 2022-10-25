@@ -30,7 +30,7 @@ function createID(){
 }
 
 let url = new URL(window.location.href)
-if (url.pathname == "/"){
+if (url.pathname == "/" || url.pathname == "/letter" || url.pathname == "/letter/"){
     let target = document.getElementById("target")
     let text = document.getElementById("text")
 
@@ -48,7 +48,7 @@ if (url.pathname == "/"){
             target.classList.add("active")
         }
     })
-} else if (url.pathname == "/edit.html"){
+} else if (url.pathname == "/edit.html" || url.pathname == "/edit.html/"){
     let target = document.getElementById("target")
     let btn = document.getElementById("send-btn")
     let text = document.getElementById("text-entry")
