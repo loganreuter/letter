@@ -60,6 +60,7 @@ if (url.pathname == "/"){
             }).then(() => {
                 target.classList.remove("active")
                 console.log(`${url.origin}/letter?id=${id}`)
+                navigator.clipboard.writeText(`${url.origin}/letter?id=${id}`)
             }).catch((err) => {
                 console.log(err)
             })
